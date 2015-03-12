@@ -1,23 +1,16 @@
 # KERNELDM+V
 
-_Results_
+This is an implementation of the KernelDMV algorithm under ROS indigo.
 
-Using `sigma = 1`, I have obtained
+## Service
 
-* Dataset 1 : 
-    * max of mean is 0.786028  at -3.2
-    * max of variance is 0.0123847 at 12.3
-    
-* Dataset 2 : 
-	* max of mean is  0.73405 at -1.9
-	* max of variance is 0.0294359 at 17 (<- which basically mean mistake)
+It's a service that takes in input data as an array of `float64`. The data is organized as position first and then measurement so that it's like `[position 1][measurement 1][position 2][measurement 2][position 3][measurement 3]...[position n][measurement n]`. It returns a message with two array of `float64`. One for the mean and one for the variance.
 
-Hope it's good.
+kerneldmv_serv.serv :
 
-## compile
-
-`cmake . && make` in the main folder.
-
-the main program is named `kerneldmv`.
-
-read.cpp is a small standalone program to get the max and min of a dataset and to check that the normal distrubution was working fine.
+`
+float64[] data
+---
+float64[] mean
+float64[] variance
+`
