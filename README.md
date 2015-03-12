@@ -1,6 +1,6 @@
 # KERNELDM+V
 
-This is an implementation of the KernelDMV algorithm under ROS indigo.
+This is a 1D implementation of the KernelDMV algorithm under ROS indigo.
 
 ## Service
 
