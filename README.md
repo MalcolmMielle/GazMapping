@@ -8,9 +8,9 @@ It's a service that takes in input data as an array of `float64`. The data is or
 
 kerneldmv_serv.serv :
 
-`
+```
 float64[] data
 ---
 float64[] mean
 float64[] variance
-`
+```
